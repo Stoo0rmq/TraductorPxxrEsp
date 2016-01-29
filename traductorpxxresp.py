@@ -22,6 +22,9 @@
 #
 ###############################################################################
 
+import sys #This is for the arguments
+from sys import argv
+import subprocess
 #DICCIONARIO CON TODAS LAS PALABRAS, toda la información viene de este hilo de forocoches
 #http://www.forocoches.com/foro/showthread.php?t=4121257
 
@@ -152,4 +155,18 @@ diccionario = {9: "Una pistola de 9mm",
 
 #############################################################################
 
-print(diccionario["guero"])
+print(diccionario["josear"])
+filename = str(argv[1])
+subprocess.call(['echo','>',"traduccion.txt"])
+g = open("traduccion.txt",'w')
+with open(filename) as f:
+    for line in f:
+        for word in line.split():
+            if(word in diccionario):
+                g.write(diccionario[str(word)]+" ")
+            else:
+                g.write(word+" ")
+
+
+f.close()
+g.close()
