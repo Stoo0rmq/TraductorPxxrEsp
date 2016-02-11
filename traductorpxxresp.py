@@ -25,6 +25,8 @@
 import sys #This is for the arguments
 from sys import argv
 import subprocess
+import nltk
+
 #DICCIONARIO CON TODAS LAS PALABRAS, toda la información viene de este hilo de forocoches
 #http://www.forocoches.com/foro/showthread.php?t=4121257
 
@@ -160,14 +162,12 @@ filename = str(argv[1])
 subprocess.call(['echo','>',"traduccion.txt"])
 g = open("traduccion.txt",'w')
 with open(filename) as f:
-    for line in f:
-        for word in line.split():
-            if(word in diccionario):
-                print("aaaaaaaaaaaaaa")
-                g.write(diccionario[word]+" ")
-            else:
-                g.write(word+" ")
+    text = f.read()
+    for key in diccionario:
+        text = text.replace(str(key), diccionario[key])
 
+for word in text:
+    g.write(word)
 
 f.close()
 g.close()
