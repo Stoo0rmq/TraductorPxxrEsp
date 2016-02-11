@@ -141,6 +141,8 @@ diccionario = {9: "Una pistola de 9mm",
 "Queso": "Pasta de cocaína",
 "ratchet": "chavala cani pintada como una puerta",
 "Ratchet": "Chavala cani pintada como una puerta",
+"ratchets": "chavalas cani pintadas como una puerta",
+"Ratchets": "Chavalas cani pintadas como una puerta",
 "roca": "cocaína",
 "Roca": "Cocaína",
 "shouf": "mira",
@@ -157,7 +159,6 @@ diccionario = {9: "Una pistola de 9mm",
 
 #############################################################################
 
-print(diccionario["josear"])
 filename = str(argv[1])
 subprocess.call(['echo','>',"traduccion.txt"])
 g = open("traduccion.txt",'w')
