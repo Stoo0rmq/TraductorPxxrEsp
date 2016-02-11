@@ -100,8 +100,8 @@ diccionario = {9: "Una pistola de 9mm",
 "jawa": "chica cani pintada como una puerta",
 "josear": "buscarse la vida",
 "Josear": "Buscarse la vida",
-"junkeao": "enganchado a las drogas sanas",
-"Junkeao": "Enganchado a las drogas sanas",
+"junkeao": "enganchado a las drogas",
+"Junkeao": "Enganchado a las drogas",
 "kahba": "puta",
 "Kahba": "Puta",
 "kexar": "alabar",
@@ -163,7 +163,8 @@ with open(filename) as f:
     for line in f:
         for word in line.split():
             if(word in diccionario):
-                g.write(diccionario[str(word)]+" ")
+                print("aaaaaaaaaaaaaa")
+                g.write(diccionario[word]+" ")
             else:
                 g.write(word+" ")
 
