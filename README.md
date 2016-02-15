@@ -14,6 +14,10 @@ Toda la información del diccionario viene de este hilo de Forocoches: http://ww
 
 Cualquiera que quiera contribuir es bienvenido.
 
+### Uso
+
+Necesitamos pasarle un archivo .txt y el script nos creará un nuevo archivo llamado traduccion.txt con la traducción de la canción.
+
 ### Licencia
 
 GPLv3
